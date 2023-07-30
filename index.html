@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The DIY Academy - online and in-person DIY classes by Martin Glynn</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+
+        <div class="header__logo">
+          <img src="assets/brand-items/logo.png" alt="The DIY Academy">
+        </div>
+        <nav class="header__nav">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <section id="welcome" class="slice slice--welcome slice--with-media">
+      <div class="container">
+        <div class="slice__inner slice__inner--welcome">
+          <div class="slice__content">
+            <h1>The DIY Academy</h1>
+            <p>Online and in-person DIY classes with Martin Glynn</p>
+            <p>Don't be afraid to</p>
+            <ul>
+              <li>hang a picture</li>
+              <li>fix a door</li>
+              <li>add more info here to draw people's attention</li>
+            </ul>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ex cumque molestias fugit obcaecati
+              rerum eum inventore! Aliquam doloremque consequatur adipisci impedit nostrum qui, quisquam iusto.
+              Molestias quas modi earum.</p>
+          </div>
+          <div class="slice__media">
+            <img src="assets/images/martin-glynn.jpg"
+              alt="Martin Glynn from The DIY Academy, standing in front of a shelf built at a recent in-person DIY course">
+          </div>
+        </div>
+    </section>
+    </div>
+
+    <section id="about" class="slice slice--about">
+      <div class="container">
+        <div class="slice__inner slice__inner--about">
+          <h2>About</h2>
+          <p>Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+            Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus,
+            nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="courses" class="slice slice--courses">
+      <div class="container">
+        <div class="slice__inner slice__inner--courses">
+          <h2>Courses</h2>
+          <p>Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+            Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus,
+            nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+          <!-- Noscript content for added SEO -->
+          <noscript><a href="https://www.eventbrite.com/e/an-event-that-may-never-happen-tickets-688850419147"
+              rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a></noscript>
+          <!-- You can customize this button any way you like -->
+          <ul>
+            <li><button id="eventbrite-widget-modal-trigger-688850419147" type="button">Sign Up</button> Ballinasloe, starts 1st September</li>
+            <li><button id="eventbrite-widget-modal-trigger-688850419147" type="button">Sign Up</button> Loughrea, starts 1st September</li>
+            <li><button id="eventbrite-widget-modal-trigger-688850419147" type="button">Sign Up</button> Portumna, starts 1st September</li>
+            <li><button id="eventbrite-widget-modal-trigger-688850419147" type="button">Sign Up</button> Gort, starts 1st September</li>
+            <li><button id="eventbrite-widget-modal-trigger-688850419147" type="button">Sign Up</button> Athenry, starts 1st September</li>
+          </ul>
+
+          <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+
+          <script type="text/javascript">
+            var exampleCallback = function () {
+              console.log('Order complete!');
+            };
+
+            window.EBWidgets.createWidget({
+              widgetType: 'checkout',
+              eventId: '688850419147',
+              modal: true,
+              modalTriggerElementId: 'eventbrite-widget-modal-trigger-688850419147',
+              onOrderComplete: exampleCallback
+            });
+          </script>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="slice slice--contact">
+      <div class="container">
+        <div class="slice__inner slice__inner--contact">
+          <h2>Contact</h2>
+          <ul>
+            <li>Phone: <a href="tel:+353831085145">083 108 5145</a></li>
+            <li>Email: <a href="mailto:#">info@thediyacademy.ie</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__logo">
+          <img src="assets/brand-items/logo.png" alt="The DIY Academy">
+        </div>
+        <nav class="footer__nav">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://view.flodesk.com/pages/643e7ba0fac03426caab8043">Mailing List</a></li>
+            <li><a href="https://www.instagram.com/the.diyacademy/">Instagram</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
