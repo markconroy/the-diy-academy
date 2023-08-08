@@ -159,3 +159,15 @@ a {
     width: 50%;
   }
 }
+
+.buy-now {
+  background-color: yellowgreen;
+  display: inline-block;
+  padding: .5rem 2rem;
+  border: var(--border);
+  font-weight: bold;
+}
+.buy-now:hover,
+.buy-now:focus-within {
+  background-color: yellow;
+}
