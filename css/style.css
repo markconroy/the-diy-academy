@@ -2,6 +2,7 @@
   --color-light: #e3dcd4;
   --color-medium: #c8aba4;
   --color-dark: #524131;
+  --color-darker: #18130e;
   --width-container: 960px;
   --spacing: 1rem;
   --font-primary: "Playfair Display", serif;
@@ -80,6 +81,14 @@ a {
   transition: var(--transition-time);
 }
 
+h2 {
+  background-color: var(--color-medium);
+  margin-bottom: 1rem;
+  padding-left: .75rem;
+  border-bottom: var(--border-large);
+  color: var(--color-darker);
+}
+
 .container {
   max-width: var(--width-container);
   margin-right: auto;
@@ -148,19 +157,26 @@ a {
   padding-left: var(--spacing);
 }
 
-.slice + .slice {
-  margin-top: calc(var(--spacing) * 2);
-}
 .slice__inner {
   padding: calc(var(--spacing) * 2);
+  border-top: var(--border-large);
+  border-color: var(--color-dark);
 }
 .slice:nth-child(odd) .slice__inner {
   border-left: var(--border-large);
-  border-color: var(--color-dark);
 }
 .slice:nth-child(even) .slice__inner {
   border-right: var(--border-large);
-  border-color: var(--color-medium);
+}
+
+.slice__inner > * + *,
+.slice__content > * + * {
+  margin-top: .5rem;
+}
+
+.slice__inner > h3 ~ h3,
+.slice__content > h3 ~ h3 {
+  margin-top: 2rem;
 }
 
 @media screen and (min-width: 768px) {
