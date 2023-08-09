@@ -51,6 +51,22 @@ h6 {
   font-family: var(--font-primary);
 }
 
+h1 {
+  font-size: 2.25rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1rem;
+}
+h4 {
+  font-size: 2.25rem;
+}
+h5 {
+  font-size: 2.25rem;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -137,12 +153,13 @@ a {
 }
 .slice__inner {
   padding: calc(var(--spacing) * 2);
-  border-left: var(--border-large);
 }
 .slice:nth-child(odd) .slice__inner {
+  border-left: var(--border-large);
   border-color: var(--color-dark);
 }
 .slice:nth-child(even) .slice__inner {
+  border-right: var(--border-large);
   border-color: var(--color-medium);
 }
 
