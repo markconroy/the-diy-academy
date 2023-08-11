@@ -3,6 +3,7 @@
   --color-medium: #c8aba4;
   --color-dark: #524131;
   --color-darker: #18130e;
+  --color-white: #fff;
   --width-container: 960px;
   --spacing: 1rem;
   --font-primary: "Playfair Display", serif;
@@ -193,14 +194,18 @@ h2 {
   }
 }
 
-.buy-now {
-  background-color: yellowgreen;
+.buy-now-button {
+  background-color: var(--color-dark);
   display: inline-block;
+  margin-bottom: .5rem;
+  color: var(--color-white);
   padding: .5rem 2rem;
   border: var(--border);
   font-weight: bold;
 }
-.buy-now:hover,
-.buy-now:focus-within {
+.buy-now-button:hover,
+.buy-now-button:focus {
   background-color: yellow;
+  color: var(--color-dark);
+  text-decoration: none;
 }
