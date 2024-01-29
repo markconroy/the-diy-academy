@@ -23,6 +23,27 @@
   <meta name="twitter:creator" content="twitter.com/markconroy" />
   <meta name="twitter:url" content="https://thediyacademy.ie" />
   <meta name="twitter:image" content="https://thediyacademy.ie/assets/brand-items/logo.png" />
+  <script>
+    (function (w, d, t, h, s, n) {
+      w.FlodeskObject = n;
+      var fn = function () {
+        (w[n].q = w[n].q || []).push(arguments);
+      };
+      w[n] = w[n] || fn;
+      var f = d.getElementsByTagName(t)[0];
+      var v = '?v=' + Math.floor(new Date().getTime() / (120 * 1000)) * 60;
+      var sm = d.createElement(t);
+      sm.async = true;
+      sm.type = 'module';
+      sm.src = h + s + '.mjs' + v;
+      f.parentNode.insertBefore(sm, f);
+      var sn = d.createElement(t);
+      sn.async = true;
+      sn.noModule = true;
+      sn.src = h + s + '.js' + v;
+      f.parentNode.insertBefore(sn, f);
+    })(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');
+  </script>
   <title>The DIY Academy - online and in-person DIY classes by Martin Glynn</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -75,7 +96,8 @@
               learning according to your schedule.</p>
 
             <h3>📧 Weekly Emails:</h3>
-            <p>Stay on track and motivated with weekly emails delivered straight to your inbox. These emails will contain
+            <p>Stay on track and motivated with weekly emails delivered straight to your inbox. These emails will
+              contain
               three core elements - practical, product and tool to get you started on your DIY journey.</p>
 
             <h3>💬 Live Q&A Sessions</h3>
@@ -86,7 +108,8 @@
 
             <p>To enroll in this 6-week online course, simply click the button below. The course is affordably priced at
               €59, ensuring accessibility for all. Payments can be made securely through Stripe.<br>
-            <a class="buy-now-button" href="https://buy.stripe.com/5kA7w3c72fZw8RqaER">Sign up for the online course</a>
+              <a class="buy-now-button" href="https://buy.stripe.com/5kA7w3c72fZw8RqaER">Sign up for the online
+                course</a>
             </p>
           </div>
           <div class="slice__media">
@@ -209,6 +232,21 @@
             <li>Phone: <a href="tel:+353831085145">083 108 5145</a></li>
             <li>Email: <a href="mailto:martinglynn1979@gmail.com">martinglynn1979@gmail.com</a></li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="mailing-list" class="slice slice--mailing-list">
+      <div class="container">
+        <div class="slice__inner slice__inner--mailing-list">
+          <h2>Join our mailing list</h2>
+          <div id="fd-form-65b7b4ced4c3c976f37a47ec"></div>
+          <script>
+            window.fd('form', {
+              formId: '65b7b4ced4c3c976f37a47ec',
+              containerEl: '#fd-form-65b7b4ced4c3c976f37a47ec'
+            });
+          </script>
         </div>
       </div>
     </section>

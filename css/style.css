@@ -215,3 +215,14 @@ mark {
   color: var(--color-dark);
   text-decoration: none;
 }
+
+.slice--mailing-list form {
+  background-color: var(--color-light);
+}
+
+/* Double .slice needed for specificity */
+.slice.slice.slice--mailing-list input,
+.slice.slice.slice--mailing-list label {
+  border: var(--border);
+}
+
