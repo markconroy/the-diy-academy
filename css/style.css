@@ -226,3 +226,6 @@ mark {
   border: var(--border);
 }
 
+.slice__inner img {
+  max-width: 500px;
+}
