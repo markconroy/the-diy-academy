@@ -184,6 +184,8 @@ mark {
 .slice__inner > h3 ~ h3,
 .slice__content > h3 ~ h3 {
   margin-top: 2rem;
+  border-top: var(--border);
+  padding-top: 2rem;
 }
 
 @media screen and (min-width: 768px) {
