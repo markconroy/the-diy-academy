@@ -79,7 +79,9 @@ p {
   margin-bottom: 0;
 }
 
-a {
+a,
+button,
+input {
   transition: var(--transition-time);
 }
 
@@ -231,6 +233,10 @@ mark {
 
 .slice.slice.slice--mailing-list button {
   background-color: var(--color-dark);
+}
+.slice.slice.slice--mailing-list button:hover {
+  background-color: var(--color-white);
+  color: var(--color-dark);
 }
 
 .slice__inner img {
