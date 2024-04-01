@@ -229,6 +229,10 @@ mark {
   border: var(--border);
 }
 
+.slice.slice.slice--mailing-list button {
+  background-color: var(--color-dark);
+}
+
 .slice__inner img {
   max-width: 400px;
 }
