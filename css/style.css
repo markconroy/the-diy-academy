@@ -98,6 +98,11 @@ mark {
   display: inline-block;
 }
 
+hr {
+  margin-block: 2rem !important;
+  display: block;
+}
+
 .container {
   max-width: var(--width-container);
   margin-right: auto;
