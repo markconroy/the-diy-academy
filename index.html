@@ -55,6 +55,7 @@
       f.parentNode.insertBefore(sn, f);
     })(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');
   </script>
+
   <title>The DIY Academy - online and in-person DIY classes by Martin Glynn</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -95,7 +96,7 @@
 
             <h2>New Online Course 2024!</h2>
             <p>Launching 1st August.</p>
-            <p><a class="buy-now-button" href="https://buy.stripe.com/00g6rZ8UQ9B81oYdRh">Get early bird price</a>.</p>
+            <p><button type="button" class="buy-now-button buy-now-button--waiting-list">Join the waiting list</button></p>
             <p>We will soon launch our <strong>newly re-designed and re-developed</strong> 6 week beginners online DIY course aimed to
               empower you with valuable skills and knowledge that you can apply from the comfort of your home.</p>
 
@@ -118,8 +119,7 @@
 
             <p>Early bird price for the course is <strong>only €59</strong>. Purchase by clicking the button below.</p>
             <p>Once the course launches, the price will then be €79.</p>
-            <a class="buy-now-button" href="https://buy.stripe.com/00g6rZ8UQ9B81oYdRh">Sign up for the online
-              course</a>
+            <button type="button" class="buy-now-button buy-now-button--waiting-list">Join the waiting list</button>
             <p><small>(Payments are made securely through Stripe.)</small></p>
           </div>
           <div class="slice__media">
@@ -236,6 +236,16 @@
     </div>
   </footer>
 
+  <dialog class="dialog">
+    <div class="dialog__inner">
+      <div class="dialog__close">
+        <button class="">Close</button>
+      </div>
+      <div class="dialog__content"></div>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
