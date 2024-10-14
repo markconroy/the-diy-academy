@@ -280,6 +280,7 @@ hr {
 
 .programme-card {
   border: var(--border);
+  border-width: 2px;
 }
 
 .programme-card h3 {
