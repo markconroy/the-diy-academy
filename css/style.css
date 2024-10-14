@@ -270,3 +270,25 @@ hr {
   background-color: var(--color-dark);
   color: var(--color-white);
 }
+
+.schedules,
+.upcoming-programmes {
+  display: grid;
+  gap: var(--spacing);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.programme-card {
+  border: var(--border);
+}
+
+.programme-card h3 {
+  background-color: var(--color-dark);
+  padding: var(--spacing);
+  border-bottom: var(--border);
+  color: var(--color-white);
+}
+
+.programme-card__content {
+  padding: var(--spacing);
+}
