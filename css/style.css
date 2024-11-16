@@ -278,18 +278,18 @@ hr {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
-.programme-card {
+.workshop-card {
   border: var(--border);
   border-width: 2px;
 }
 
-.programme-card h3 {
+.workshop-card h3 {
   background-color: var(--color-dark);
   padding: var(--spacing);
   border-bottom: var(--border);
   color: var(--color-white);
 }
 
-.programme-card__content {
+.workshop-card__content {
   padding: var(--spacing);
 }

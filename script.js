@@ -61,7 +61,7 @@ const data = fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRS5II35K0GW
 
       if (programmeDate > yesterday) {
         const programmeElement = document.createElement("div");
-        programmeElement.classList.add("programme-card");
+        programmeElement.classList.add("workshop-card");
         const name = programme.companyName.toLowerCase().replace(/ /g, "-");
         const tableOfContentsElement = document.createElement("li");
         tableOfContentsElement.innerHTML = `<a href="#${name}">${programme.companyName} - ${programme.date}</a>`;
@@ -69,7 +69,7 @@ const data = fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRS5II35K0GW
 
         programmeElement.innerHTML = `
           <h3 id="${name}">${programme.companyName}</h3>
-          <div class="programme-card__content">
+          <div class="workshop-card__content">
             <p>${programme.date}</p>
             <p>
               ${programme.addressLine1 ? programme.addressLine1 + '<br>' : ''}
