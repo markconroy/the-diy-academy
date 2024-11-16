@@ -29,7 +29,7 @@ dialogCloseButton.addEventListener("click", () => {
 });
 
 const tableOfContents = document.querySelector("#table-of-contents");
-const upcomingProgrammes = document.querySelector("#upcoming-programmes");
+const upcomingProgrammes = document.querySelector("#upcoming-workshops");
 
 const data = fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRS5II35K0GWYLE2PjprTyP8IOQekp0VSdnlufSfpdiSBiyR6g_HwbyHO1bK0xSkVdUvcJFCS4qYJze/pub?gid=0&single=true&output=csv")
   .then((response) => response.text())

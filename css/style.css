@@ -272,7 +272,7 @@ hr {
 }
 
 .schedules,
-.upcoming-programmes {
+.upcoming-workshops {
   display: grid;
   gap: var(--spacing);
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
