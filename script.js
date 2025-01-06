@@ -59,7 +59,7 @@ const data = fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRS5II35K0GW
       const yesterday = new Date(currentDate);
       yesterday.setDate(currentDate.getDate() - 1);
 
-      if (programmeDate > yesterday) {
+      if (tableOfContents && programmeDate > yesterday) {
         const programmeElement = document.createElement("div");
         programmeElement.classList.add("workshop-card");
         const name = programme.companyName.toLowerCase().replace(/ /g, "-");
