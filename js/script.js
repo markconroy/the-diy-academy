@@ -6,6 +6,7 @@ const dialogContent = document.querySelector(".dialog__content");
 const waitingListButtons = document.querySelectorAll(
   ".buy-now-button--waiting-list"
 );
+const findAWorkshop = document.querySelector("#find-a-workshop");
 
 waitingListButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -31,13 +32,24 @@ dialogCloseButton.addEventListener("click", () => {
 const tableOfContents = document.querySelector("#table-of-contents");
 const upcomingProgrammes = document.querySelector("#upcoming-workshops");
 
-const data = fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRS5II35K0GWYLE2PjprTyP8IOQekp0VSdnlufSfpdiSBiyR6g_HwbyHO1bK0xSkVdUvcJFCS4qYJze/pub?gid=0&single=true&output=csv")
+// Initialize the map once
+const mapElement = document.createElement("div");
+mapElement.id = "main-map";
+mapElement.style.height = "600px"; // Set height for the map
+findAWorkshop.appendChild(mapElement);
+
+const map = L.map(mapElement).setView([53.0331978, -7.30267514], 7); // Default center and zoom
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution: '© OpenStreetMap contributors',
+}).addTo(map);
+
+fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRS5II35K0GWYLE2PjprTyP8IOQekp0VSdnlufSfpdiSBiyR6g_HwbyHO1bK0xSkVdUvcJFCS4qYJze/pub?gid=0&single=true&output=csv")
   .then((response) => response.text())
   .then((text) => {
     const rows = text.split("\n");
     rows.forEach((row, index) => {
       if (index === 0) {
-        return;
+        return; // Skip header row
       }
       const columns = row.split(",");
       const programme = {
@@ -49,7 +61,10 @@ const data = fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRS5II35K0GW
         county: columns[5],
         postcode: columns[6],
         link: columns[7],
+        latitude: columns[8],
+        longitude: columns[9],
       };
+
       // Manually parse the date string (assuming DD/MM/YYYY format)
       const [day, month, year] = programme.date.split("/");
       const programmeDate = new Date(`${year}-${month}-${day}`);
@@ -82,6 +97,18 @@ const data = fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRS5II35K0GW
           </div>
         `;
         upcomingProgrammes.appendChild(programmeElement);
+
+        // Add marker to the map if latitude and longitude are valid
+        if (programme.latitude && programme.longitude) {
+          const lat = parseFloat(programme.latitude);
+          const lng = parseFloat(programme.longitude);
+
+          if (!isNaN(lat) && !isNaN(lng)) {
+            L.marker([lat, lng])
+              .addTo(map)
+              .bindPopup(`<strong>${programme.companyName}</strong><br>${programme.date} - <a href="${programme.link}" target="_blank">Sign Up</a>`);
+          }
+        }
       }
     });
   });
