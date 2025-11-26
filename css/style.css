@@ -225,7 +225,7 @@ hr {
 }
 
 .slice__inner img {
-  max-width: 400px;
+  width: 400px;
 }
 
 .dialog[open] {
