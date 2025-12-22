@@ -39,7 +39,7 @@ class NavBar extends HTMLElement {
       </style>
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/programmes/workshops">Live Workshops</a></li>
+        <li><a href="/programmes/workshops">DIY Workshops</a></li>
         <li><a href="/programmes/online-courses">Online Course</a></li>
         <li><a href="/programmes/schools">Schools</a></li>
         <li><a href="/contact">Contact Us</a></li>
