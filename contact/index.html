@@ -59,44 +59,58 @@
 
 <body>
   <header class="header">
-    <div class="container">
+    <div class="container padding-horizontal">
       <div class="header__inner">
-
-        <div class="header__logo">
-          <img src="/assets/brand-items/logo.png" alt="The DIY Academy">
+        <div class="header__branding">
+          <div class="header__branding-logo">
+            <img src="/assets/brand-items/logo.png" alt="The DIY Academy">
+          </div>
         </div>
+
         <nav class="header__nav">
-          <diy-nav></diy-nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/programmes/workshops">DIY Workshops</a></li>
+            <li><a href="/programmes/online-courses">Online Course</a></li>
+            <li><a href="/programmes/schools">Schools</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+          </ul>
         </nav>
+
+        <div class="header__dialog-control">
+          <button class="header__menu-button" aria-label="Open menu" aria-haspopup="dialog"
+            aria-controls="dialog-menu">Menu</button>
+        </div>
+
       </div>
     </div>
   </header>
 
   <main class="main">
 
-    <section id="title" class="slice slice--title"></section>
+  <section id="contact" class="section section--bg-alt">
     <div class="container">
-      <div class="slice__inner slice__inner--programmes">
-        <h1>Contact Us</h1>
-      </div>
-    </div>
-    </section>
+      <div class="section__inner section__inner--contact">
+        <div class="section__header flow">
 
-    <section id="contact" class="slice slice--contact">
-      <div class="container">
-        <div class="slice__inner slice__inner--contact">
-          <li>Phone: <a href="tel:+353831085145">083 108 5145</a></li>
-          <li>Email: <a href="mailto:info@thediyacademy.ie">info@thediyacademy.ie</a></li>
+          <h1>Contact Us</h1>
+          <ul class="grid">
+            <li>Phone: <a class="button" href="tel:+353831085145">083 108 5145</a></li>
+            <li>Email: <a class="button" href="mailto:info@thediyacademy.ie">info@thediyacademy.ie</a></li>
           </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="mailing-list" class="slice slice--mailing-list">
+    <section id="mailing-list" class="section">
       <div class="container">
-        <div class="slice__inner slice__inner--mailing-list">
-          <h2>Join our mailing list</h2>
-          <div id="fd-form-65b7b4ced4c3c976f37a47ec"></div>
+        <div class="section__inner">
+          <div class="section__header flow">
+            <h2 class="h1">Join our mailing list</h2>
+            <div id="fd-form-65b7b4ced4c3c976f37a47ec"></div>
+          </div>
+
           <script>
             window.fd('form', {
               formId: '65b7b4ced4c3c976f37a47ec',
@@ -110,17 +124,65 @@
   </main>
 
   <footer class="footer">
-    <div class="container">
+    <div class="container padding-horizontal">
       <div class="footer__inner">
-        <div class="footer__logo">
-          <img src="/assets/brand-items/logo.png" alt="The DIY Academy">
+        <div class="grid grid--large-2">
+          <div class="footer__block">
+            <div class="footer__logo">
+              <img src="/assets/brand-items/logo.png" alt="The DIY Academy">
+            </div>
+            <p>Empowering you with the skills and confidence to transform your living spaces through the art of do-it-yourself home improvement.</p>
+          </div>
+          <div class="grid grid--large-2">
+            <div class="footer__block">
+              <nav class="footer__nav">
+                <h2>Quick Links</h2>
+                <ul>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/programmes/workshops">DIY Workshops</a></li>
+                  <li><a href="/programmes/online-courses">Online Course</a></li>
+                  <li><a href="/programmes/schools">Schools</a></li>
+                  <li><a href="/contact">Contact Us</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="footer__block">
+              <nav class="footer__nav">
+                <h2>Contact Us</h2>
+                <ul>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/programmes/workshops">DIY Workshops</a></li>
+                  <li><a href="/programmes/online-courses">Online Course</a></li>
+                  <li><a href="/programmes/schools">Schools</a></li>
+                  <li><a href="/contact">Contact Us</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
         </div>
-        <nav class="footer__nav">
-          <diy-nav></diy-nav>
-        </nav>
       </div>
     </div>
   </footer>
+
+  <dialog class="dialog-menu">
+    <div class="dialog-menu__inner">
+
+      <div class="dialog-menu__close">
+        <button class="dialog-menu__close-button" aria-label="Close menu">Close</button>
+      </div>
+
+      <div class="dialog-menu__menu">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/programmes/workshops">DIY Workshops</a></li>
+          <li><a href="/programmes/online-courses">Online Course</a></li>
+          <li><a href="/programmes/schools">Schools</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </dialog>
 
   <dialog class="dialog">
     <div class="dialog__inner">
@@ -131,10 +193,9 @@
     </div>
   </dialog>
 
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="/js/script.js"></script>
-  <script src="/js/web-components.js" type="module"></script>
-  <!-- <script src="../js/script.js"></script> -->
-
 </body>
 
 </html>

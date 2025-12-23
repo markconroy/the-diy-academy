@@ -36,7 +36,9 @@ const upcomingProgrammes = document.querySelector("#upcoming-workshops");
 const mapElement = document.createElement("div");
 mapElement.id = "main-map";
 mapElement.style.height = "600px"; // Set height for the map
-findAWorkshop.appendChild(mapElement);
+if (findAWorkshop) {
+  findAWorkshop.appendChild(mapElement);
+}
 
 const map = L.map(mapElement).setView([53.0331978, -7.30267514], 7); // Default center and zoom
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -76,15 +78,15 @@ fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRS5II35K0GWYLE2PjprTyP8I
 
       if (tableOfContents && programmeDate > yesterday) {
         const programmeElement = document.createElement("div");
-        programmeElement.classList.add("workshop-card");
+        programmeElement.classList.add("card");
         const name = programme.companyName.toLowerCase().replace(/ /g, "-");
         const tableOfContentsElement = document.createElement("li");
         tableOfContentsElement.innerHTML = `<a href="#${name}">${programme.companyName} - ${programme.date}</a>`;
         tableOfContents.appendChild(tableOfContentsElement);
 
         programmeElement.innerHTML = `
-          <h3 id="${name}">${programme.companyName}</h3>
-          <div class="workshop-card__content">
+          <div class="card__content">
+            <h3 id="${name}">${programme.companyName}</h3>
             <p>${programme.date}</p>
             <p>
               ${programme.addressLine1 ? programme.addressLine1 + '<br>' : ''}
@@ -93,7 +95,7 @@ fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRS5II35K0GWYLE2PjprTyP8I
               ${programme.county ? programme.county + '<br>' : ''}
               ${programme.postcode ? programme.postcode : ''}
             </p>
-            <a class="buy-now-button" href="${programme.link}" target="_blank">Sign Up</a>
+            <a class="button" href="${programme.link}" target="_blank">Sign Up</a>
           </div>
         `;
         upcomingProgrammes.appendChild(programmeElement);
@@ -112,3 +114,28 @@ fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRS5II35K0GWYLE2PjprTyP8I
       }
     });
   });
+
+const dialogMenu = document.querySelector('.dialog-menu');
+const dialogMenuClose = document.querySelector('.dialog-menu__close button');
+const dialogMenuOpen = document.querySelector('.header__menu-button');
+
+dialogMenuOpen.addEventListener('click', () => {
+  dialogMenu.showModal();
+  dialogMenuOpen.setAttribute('aria-expanded', 'true');
+});
+
+dialogMenuClose.addEventListener('click', () => {
+  dialogMenu.close();
+  dialogMenuOpen.setAttribute('aria-expanded', 'false');
+});
+
+const windowWidth = window.innerWidth;
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth !== windowWidth) {
+    if (dialogMenu.open) {
+      dialogMenu.close();
+      dialogMenuOpen.setAttribute('aria-expanded', 'false');
+    }
+  }
+});

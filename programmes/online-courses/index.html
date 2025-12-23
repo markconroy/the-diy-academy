@@ -59,37 +59,55 @@
 
 <body>
   <header class="header">
-    <div class="container">
+    <div class="container padding-horizontal">
       <div class="header__inner">
-
-        <div class="header__logo">
-          <img src="/assets/brand-items/logo.png" alt="The DIY Academy">
+        <div class="header__branding">
+          <div class="header__branding-logo">
+            <img src="/assets/brand-items/logo.png" alt="The DIY Academy">
+          </div>
         </div>
+
         <nav class="header__nav">
-          <diy-nav></diy-nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/programmes/workshops">DIY Workshops</a></li>
+            <li><a href="/programmes/online-courses">Online Course</a></li>
+            <li><a href="/programmes/schools">Schools</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+          </ul>
         </nav>
+
+        <div class="header__dialog-control">
+          <button class="header__menu-button" aria-label="Open menu" aria-haspopup="dialog"
+            aria-controls="dialog-menu">Menu</button>
+        </div>
+
       </div>
     </div>
   </header>
 
   <main class="main">
 
-    <section class="slice">
+    <section class="section section--bg-alt">
       <div class="container">
-        <div class="slice__inner">
-          <h1>Online Beginners Course:</h1>
-          <h2>Waiting List Available!</h2>
-          <p>Join the waiting list for the Online DIY Beginners Series!</p>
-          <p>Learn the essential home improvement skills and gain confidence in tackling DIY projects - all from the
-            comfort of your home and at your own pace.</p>
+        <div class="section__inner">
+          <div class="section__header flow">
+            <h1>Online Beginners Course:</h1>
+            <h2>Waiting List Available!</h2>
+            <p>Join the waiting list for the Online DIY Beginners Series!</p>
+            <p>Learn the essential home improvement skills and gain confidence in tackling DIY projects - <br>all from the
+              comfort of your home and at your own pace.</p>
+            </div>
         </div>
       </div>
     </section>
 
-    <section class="slice">
+    <section class="section">
       <div class="container">
-        <div class="slice__inner">
-          <h2>Who Is This For?</h2>
+        <div class="section__inner">
+          <div class="section__header flow">
+            <h2 class="h1">Who Is This For?</h2>
+          </div>
           <ul>
             <li>Complete beginners who want to learn DIY but don't know where to start.</li>
             <li>Homeowners & renters who want to save money by fixing and improving their space themselves.</li>
@@ -99,12 +117,13 @@
       </div>
     </section>
 
-    <section class="slice">
+    <section class="section section--bg-alt">
       <div class="container">
-        <div class="slice__inner">
-
-          <h2>What's inside?</h2>
-          <p>7 Practical, Easy-to-Follow Modules:</p>
+        <div class="section__inner">
+          <div class="section__header flow">
+            <h2 class="h1">What's inside?</h2>
+            <p>7 Practical, Easy-to-Follow Modules:</p>
+          </div>
           <ol>
             <li>Attaching to Block Walls - Secure pictures, shelves, and even heavy items with confidence.</li>
             <li>Attaching to Stud Walls - Learn what to watch out for and how these differ from block walls.</li>
@@ -120,11 +139,12 @@
       </div>
     </section>
 
-    <section class="slice">
+    <section class="section">
       <div class="container">
-        <div class="slice__inner">
-
-          <h2>Plus, you'll get:</h2>
+        <div class="section__inner">
+          <div class="section__header flow">
+            <h2 class="h1">Plus, you'll get:</h2>
+          </div>
           <ul>
             <li>Step-by-step video tutorials on how to use products and tools safely and effectively - Bite-sized and
               beginner-friendly!</li>
@@ -136,11 +156,12 @@
       </div>
     </section>
 
-    <section class="slice">
+    <section class="section section--bg-alt">
       <div class="container">
-        <div class="slice__inner">
-
-          <h2>All this for just €79</h2>
+        <div class="section__inner">
+          <div class="section__header flow">
+            <h2 class="h1">All this for just €79</h2>
+          </div>
           <ul>
             <li>Lifetime Access!</li>
             <li>No experience? No problem!</li>
@@ -150,22 +171,22 @@
       </div>
     </section>
 
-    <section class="slice">
+    <section class="section">
       <div class="container">
-        <div class="slice__inner">
+        <div class="section__inner">
           <h2>Join Waiting List!</h2>
-          <p>
             <a href="https://the-diy-academy.myflodesk.com/online"
-              class="buy-now-button">Join the Waitlist</a>
-          </p>
+              class="button">Join the Waitlist</a>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="slice slice--contact">
+    <section id="contact" class="section section--bg-alt">
       <div class="container">
-        <div class="slice__inner slice__inner--contact">
-          <h2>Ready to Get Started?</h2>
+        <div class="section__inner">
+          <div class="section__header flow">
+            <h2 class="h1">Ready to Get Started?</h2>
+          </div>
           <p>Embark on your DIY journey with us today! Choose the program that suits your learning style - whether it's
             the interactive live workshops or the flexible online course. Sign up now and take the first step towards
             becoming a confident DIY enthusiast!</p>
@@ -177,11 +198,13 @@
       </div>
     </section>
 
-    <section id="mailing-list" class="slice slice--mailing-list">
+    <section id="mailing-list" class="section">
       <div class="container">
-        <div class="slice__inner slice__inner--mailing-list">
-          <h2>Join our mailing list</h2>
-          <div id="fd-form-65b7b4ced4c3c976f37a47ec"></div>
+        <div class="section__inner">
+          <div class="section__header flow">
+            <h2 class="h1">Join our mailing list</h2>
+            <div id="fd-form-65b7b4ced4c3c976f37a47ec"></div>
+          </div>
           <script>
             window.fd('form', {
               formId: '65b7b4ced4c3c976f37a47ec',
@@ -195,17 +218,65 @@
   </main>
 
   <footer class="footer">
-    <div class="container">
+    <div class="container padding-horizontal">
       <div class="footer__inner">
-        <div class="footer__logo">
-          <img src="/assets/brand-items/logo.png" alt="The DIY Academy">
+        <div class="grid grid--large-2">
+          <div class="footer__block">
+            <div class="footer__logo">
+              <img src="/assets/brand-items/logo.png" alt="The DIY Academy">
+            </div>
+            <p>Empowering you with the skills and confidence to transform your living spaces through the art of do-it-yourself home improvement.</p>
+          </div>
+          <div class="grid grid--large-2">
+            <div class="footer__block">
+              <nav class="footer__nav">
+                <h2>Quick Links</h2>
+                <ul>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/programmes/workshops">DIY Workshops</a></li>
+                  <li><a href="/programmes/online-courses">Online Course</a></li>
+                  <li><a href="/programmes/schools">Schools</a></li>
+                  <li><a href="/contact">Contact Us</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="footer__block">
+              <nav class="footer__nav">
+                <h2>Contact Us</h2>
+                <ul>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/programmes/workshops">DIY Workshops</a></li>
+                  <li><a href="/programmes/online-courses">Online Course</a></li>
+                  <li><a href="/programmes/schools">Schools</a></li>
+                  <li><a href="/contact">Contact Us</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
         </div>
-        <nav class="footer__nav">
-          <diy-nav></diy-nav>
-        </nav>
       </div>
     </div>
   </footer>
+
+  <dialog class="dialog-menu">
+    <div class="dialog-menu__inner">
+
+      <div class="dialog-menu__close">
+        <button class="dialog-menu__close-button" aria-label="Close menu">Close</button>
+      </div>
+
+      <div class="dialog-menu__menu">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/programmes/workshops">DIY Workshops</a></li>
+          <li><a href="/programmes/online-courses">Online Course</a></li>
+          <li><a href="/programmes/schools">Schools</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </dialog>
 
   <dialog class="dialog">
     <div class="dialog__inner">
@@ -216,10 +287,9 @@
     </div>
   </dialog>
 
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="/js/script.js"></script>
-  <script src="/js/web-components.js" type="module"></script>
-  <!-- <script src="../js/script.js"></script> -->
-
 </body>
 
 </html>
