@@ -141,12 +141,6 @@ body {
   padding-block-start: var(--spacing);
 }
 
-.footer {
-  padding-block: var(--spacing);
-  background-color: var(--color-accent-2-dark);
-  color: var(--color-white);
-}
-
 h1,
 h2,
 h3,
@@ -369,6 +363,23 @@ img {
 .footer {
   padding-block: var(--spacing-largest);
   color: var(--color-accent-dark);
+  background-color: var(--color-accent-2-dark);
+}
+
+.footer__bottom {
+  border-block-start: var(--border-light);
+  margin-block-start: var(--spacing);
+  padding-block-start: var(--spacing-larger);
+  color: var(--color-light);
+}
+
+.footer__inner {
+  border-block-start: var(--border-light);
+  padding-block-start: var(--spacing-largest);
+}
+
+.footer__block h2 {
+  color: var(--color-light);
 }
 
 .footer__block ul {
