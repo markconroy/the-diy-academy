@@ -397,7 +397,6 @@ img {
 
 .footer__logo {
   max-width: 150px;
-  background-color: var(--color-white);
   margin-bottom: var(--spacing-large);
 }
 
