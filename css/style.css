@@ -137,10 +137,6 @@ body {
   background-color: var(--color-light);
 }
 
-.header {
-  padding-block-start: var(--spacing);
-}
-
 h1,
 h2,
 h3,
@@ -302,6 +298,10 @@ img {
 }
 
 /* Header */
+.header {
+  padding-block: var(--spacing-large);
+}
+
 .header__inner {
   display: flex;
   justify-content: space-between;
