@@ -29,7 +29,7 @@ dialogCloseButton.addEventListener("click", () => {
   dialog.close();
 });
 
-const tableOfContents = document.querySelector("#table-of-contents");
+// const tableOfContents = document.querySelector("#table-of-contents");
 const upcomingProgrammes = document.querySelector("#upcoming-workshops");
 
 // Initialize the map once
@@ -76,13 +76,13 @@ fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRS5II35K0GWYLE2PjprTyP8I
       const yesterday = new Date(currentDate);
       yesterday.setDate(currentDate.getDate() - 1);
 
-      if (tableOfContents && programmeDate > yesterday) {
+      if (programmeDate > yesterday) {
         const programmeElement = document.createElement("div");
         programmeElement.classList.add("card");
         const name = programme.companyName.toLowerCase().replace(/ /g, "-");
-        const tableOfContentsElement = document.createElement("li");
-        tableOfContentsElement.innerHTML = `<a href="#${name}">${programme.companyName} - ${programme.date}</a>`;
-        tableOfContents.appendChild(tableOfContentsElement);
+        // const tableOfContentsElement = document.createElement("li");
+        // tableOfContentsElement.innerHTML = `<a href="#${name}">${programme.companyName} - ${programme.date}</a>`;
+        // tableOfContents.appendChild(tableOfContentsElement);
 
         programmeElement.innerHTML = `
           <div class="card__content">
@@ -115,6 +115,7 @@ fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRS5II35K0GWYLE2PjprTyP8I
     });
   });
 
+// Off-canvas dialog menu.
 const dialogMenu = document.querySelector('.dialog-menu');
 const dialogMenuClose = document.querySelector('.dialog-menu__close button');
 const dialogMenuOpen = document.querySelector('.header__menu-button');
