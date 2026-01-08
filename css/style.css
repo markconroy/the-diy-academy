@@ -129,6 +129,10 @@
   transition: var(--transition-time);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   line-height: var(--line-height);
