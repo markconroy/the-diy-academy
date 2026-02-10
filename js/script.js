@@ -177,23 +177,13 @@ function loadWorkshops(options) {
 
 const spreadsheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRS5II35K0GWYLE2PjprTyP8IOQekp0VSdnlufSfpdiSBiyR6g_HwbyHO1bK0xSkVdUvcJFCS4qYJze/pub?gid=0&single=true&output=csv";
 
-// Junior workshops
-if (document.querySelector("#upcoming-workshops--juniors")) {
+// Load Workshops
+if (document.querySelector("#upcoming-workshops")) {
   loadWorkshops({
-    workshopsContainerId: "upcoming-workshops--juniors",
-    mapContainerId: "find-a-workshop--juniors",
+    workshopsContainerId: "upcoming-workshops",
+    mapContainerId: "find-a-workshop",
     spreadsheetUrl: spreadsheetUrl,
-    demographic: "Junior"
-  });
-}
-
-// Adult workshops
-if (document.querySelector("#upcoming-workshops--adults")) {
-  loadWorkshops({
-    workshopsContainerId: "upcoming-workshops--adults",
-    mapContainerId: "find-a-workshop--adults",
-    spreadsheetUrl: spreadsheetUrl,
-    demographic: "Adult"
+    demographic: null
   });
 }
 
